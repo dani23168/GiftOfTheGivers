@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "About";
+}
+<section class="page-hero">
+    <div class="container py-5">
+        <span class="eyebrow">ABOUT THE PROTOTYPE</span>
+        <h1 class="text-white fw-bold mt-2">Digital support for humanitarian operations</h1>
+        <p class="text-white-50 lead mb-0">A professional first-release concept for the Gift of the Givers application.</p>
+    </div>
+</section>
+<div class="container py-5">
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <h2 class="fw-bold">Purpose</h2>
+            <p>
+                This application provides a central place for donors, volunteers and authorised employees
+                to interact with disaster relief information. It demonstrates the proposed user experience
+                and core workflows before the full production system is developed.
+            </p>
+            <h2 class="fw-bold mt-4">Prototype features</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ASP.NET Core MVC responsive interface</li>
+                <li class="list-group-item">ASP.NET Identity authentication and Employee/Donor roles</li>
+                <li class="list-group-item">Donation capture with one-time/recurring and multi-currency options</li>
+                <li class="list-group-item">On-screen prototype donation tax certificate</li>
+                <li class="list-group-item">Volunteer registration and employee review</li>
+                <li class="list-group-item">Relief project updates for authorised employees</li>
+                <li class="list-group-item">SQLite local database with Azure SQL-ready configuration</li>
+            </ul>
+        </div>
+        <div class="col-lg-5">
+            <div class="info-panel">
+                <h4>Architecture</h4>
+                <p class="text-muted mb-0">ASP.NET Core MVC → Entity Framework Core → Identity → SQLite/SQL Server.</p>
+            </div>
+        </div>
+    </div>
+</div>

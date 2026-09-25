@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GiftOfTheGivers\\GiftOfTheGivers\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Models\\ReliefProject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GiftOfTheGivers\\GiftOfTheGivers\\Models\\ReliefProject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Models\\ProjectUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GiftOfTheGivers\\GiftOfTheGivers\\Models\\ProjectUpdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\00000000000001_RenameProjectUpdateId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\00000000000001_RenameProjectUpdateId.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReliefProject.cs",
+              "DocumentMoniker": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Models\\ReliefProject.cs",
+              "RelativeDocumentMoniker": "GiftOfTheGivers\\GiftOfTheGivers\\Models\\ReliefProject.cs",
+              "ToolTip": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Models\\ReliefProject.cs",
+              "RelativeToolTip": "GiftOfTheGivers\\GiftOfTheGivers\\Models\\ReliefProject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-24T07:47:45.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "00000000000001_RenameProjectUpdateId.cs",
+              "DocumentMoniker": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\00000000000001_RenameProjectUpdateId.cs",
+              "RelativeDocumentMoniker": "GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\00000000000001_RenameProjectUpdateId.cs",
+              "ToolTip": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\00000000000001_RenameProjectUpdateId.cs",
+              "RelativeToolTip": "GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\00000000000001_RenameProjectUpdateId.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:55:25.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProjectUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Models\\ProjectUpdate.cs",
+              "RelativeDocumentMoniker": "GiftOfTheGivers\\GiftOfTheGivers\\Models\\ProjectUpdate.cs",
+              "ToolTip": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Models\\ProjectUpdate.cs",
+              "RelativeToolTip": "GiftOfTheGivers\\GiftOfTheGivers\\Models\\ProjectUpdate.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:41:43.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Program.cs",
+              "RelativeDocumentMoniker": "GiftOfTheGivers\\GiftOfTheGivers\\Program.cs",
+              "ToolTip": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Program.cs",
+              "RelativeToolTip": "GiftOfTheGivers\\GiftOfTheGivers\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:37:27.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "GiftOfTheGivers\\GiftOfTheGivers\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-20T10:55:44.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GiftOfTheGivers.csproj",
+              "DocumentMoniker": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers.csproj",
+              "RelativeDocumentMoniker": "GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers.csproj",
+              "ToolTip": "C:\\Users\\dkabo\\Downloads\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers.csproj",
+              "RelativeToolTip": "GiftOfTheGivers\\GiftOfTheGivers\\GiftOfTheGivers.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-20T09:48:56.595Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

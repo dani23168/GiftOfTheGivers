@@ -1,0 +1,26 @@
+@model Donation
+@{
+    ViewData["Title"] = "Donation Complete";
+}
+<div class="container py-5">
+    <div class="certificate-card mx-auto">
+        <div class="text-center">
+            <div class="success-icon">✓</div>
+            <h1 class="fw-bold">Thank you for your support</h1>
+            <p class="text-muted">Your prototype donation has been recorded.</p>
+        </div>
+        <hr />
+        <div class="row g-3">
+            <div class="col-6"><span class="text-muted">Reference</span><strong class="d-block">#@Model.DonationID</strong></div>
+            <div class="col-6"><span class="text-muted">Date</span><strong class="d-block">@Model.DonationDate.ToLocalTime().ToString("dd MMM yyyy")</strong></div>
+            <div class="col-6"><span class="text-muted">Amount</span><strong class="d-block">@Model.Currency @Model.Amount.ToString("N2")</strong></div>
+            <div class="col-6"><span class="text-muted">Type</span><strong class="d-block">@Model.DonationType</strong></div>
+        </div>
+        <div class="alert alert-warning mt-4">This is a placeholder tax certificate for the prototype. It is not a legally valid Section 18A certificate.</div>
+        <div class="d-flex gap-2 flex-wrap">
+            <a asp-action="Certificate" asp-route-id="@Model.DonationID" class="btn btn-success">View Tax Certificate</a>
+            <button onclick="window.print()" class="btn btn-outline-secondary">Print / Save as PDF</button>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Home</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Employee Dashboard";
+}
+<div class="container py-5">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+        <div><span class="eyebrow dark">EMPLOYEE PORTAL</span><h1 class="fw-bold mt-2 mb-0">Operations dashboard</h1></div>
+        <a asp-controller="Project" asp-action="Create" class="btn btn-success">+ New Relief Project</a>
+    </div>
+    <div class="row g-3 mb-5">
+        <div class="col-md-3"><div class="stat-card"><span>Volunteers</span><strong>@ViewBag.VolunteerCount</strong></div></div>
+        <div class="col-md-3"><div class="stat-card"><span>Donations</span><strong>@ViewBag.DonationCount</strong></div></div>
+        <div class="col-md-3"><div class="stat-card"><span>Projects</span><strong>@ViewBag.ProjectCount</strong></div></div>
+        <div class="col-md-3"><div class="stat-card"><span>Total captured (symbolic)</span><strong>@ViewBag.TotalDonations.ToString("N2")</strong></div></div>
+    </div>
+
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-body p-4">
+            <h4 class="fw-bold mb-3">Recent volunteer sign-ups</h4>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead><tr><th>Name</th><th>Skills</th><th>Availability</th><th>Province</th><th>Status</th></tr></thead>
+                    <tbody>
+                    @foreach (var v in ViewBag.Volunteers)
+                    {
+                        <tr><td>@v.FullName</td><td>@v.Skills</td><td>@v.Availability</td><td>@v.Province</td><td><span class="badge text-bg-warning">@v.Status</span></td></tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-4">
+            <h4 class="fw-bold mb-3">Relief projects</h4>
+            @foreach (var p in ViewBag.Projects)
+            {
+                <div class="project-row">
+                    <div><strong>@p.ProjectName</strong><div class="small text-muted">@p.Province • @p.DisasterType • @p.Status</div></div>
+                    <a asp-controller="Project" asp-action="Index" class="btn btn-sm btn-outline-success">Manage updates</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

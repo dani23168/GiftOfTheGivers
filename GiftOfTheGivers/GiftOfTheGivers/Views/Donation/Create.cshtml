@@ -1,0 +1,46 @@
+@model Donation
+@{
+    ViewData["Title"] = "Donate";
+}
+<section class="page-hero">
+    <div class="container py-5">
+        <span class="eyebrow">SUPPORT RELIEF</span>
+        <h1 class="text-white fw-bold mt-2">Make a donation</h1>
+        <p class="text-white-50 mb-0">Prototype payment capture — no real payment is processed.</p>
+    </div>
+</section>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="form-card">
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    <label asp-for="Amount" class="form-label fw-semibold">Amount</label>
+                    <input asp-for="Amount" class="form-control form-control-lg mb-3" placeholder="Enter amount" />
+                    <span asp-validation-for="Amount" class="text-danger"></span>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label asp-for="Currency" class="form-label fw-semibold">Currency</label>
+                            <select asp-for="Currency" class="form-select">
+                                <option>ZAR</option><option>USD</option><option>EUR</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="DonationType" class="form-label fw-semibold">Donation type</label>
+                            <select asp-for="DonationType" class="form-select">
+                                <option>One-Time</option><option>Recurring</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-check my-4">
+                        <input asp-for="Anonymous" class="form-check-input" />
+                        <label asp-for="Anonymous" class="form-check-label">Make this donation anonymous</label>
+                    </div>
+                    <button class="btn btn-success btn-lg w-100">Submit Prototype Donation</button>
+                    <p class="small text-muted mt-3 mb-0">Demo only: this prototype records a dummy donation and does not connect to a payment gateway.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

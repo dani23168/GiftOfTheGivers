@@ -1,0 +1,24 @@
+@model ReliefProject
+@{
+    ViewData["Title"] = "New Relief Project";
+}
+<div class="container py-5">
+    <div class="form-card mx-auto" style="max-width:800px">
+        <h1 class="fw-bold">Create relief project</h1>
+        <p class="text-muted">Employee-only prototype feature.</p>
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+            <div class="mb-3"><label asp-for="ProjectName" class="form-label">Project name</label><input asp-for="ProjectName" class="form-control" /></div>
+            <div class="row g-3">
+                <div class="col-md-4"><label asp-for="Province" class="form-label">Province</label><input asp-for="Province" class="form-control" /></div>
+                <div class="col-md-4"><label asp-for="DisasterType" class="form-label">Disaster type</label><input asp-for="DisasterType" class="form-control" /></div>
+                <div class="col-md-4"><label asp-for="Status" class="form-label">Status</label><select asp-for="Status" class="form-select"><option>Active</option><option>Planning</option><option>Completed</option></select></div>
+            </div>
+            <div class="mb-3 mt-3"><label asp-for="StartDate" class="form-label">Start date</label><input asp-for="StartDate" type="date" class="form-control" /></div>
+            <div class="mb-4"><label asp-for="Summary" class="form-label">Summary</label><textarea asp-for="Summary" class="form-control" rows="4"></textarea></div>
+            <button class="btn btn-success">Create Project</button>
+            <a asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

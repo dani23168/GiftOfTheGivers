@@ -1,0 +1,81 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero-section">
+    <div class="container py-5">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-8">
+                <span class="eyebrow">DISASTER RELIEF • VOLUNTEERING • DONATIONS</span>
+                <h1 class="display-3 fw-bold text-white mt-3">Helping communities recover. Rebuilding lives.</h1>
+                <p class="lead text-white-50 mt-4">
+                    A prototype digital platform for coordinating humanitarian donations,
+                    volunteers and relief projects.
+                </p>
+                <div class="mt-4 d-flex flex-wrap gap-3">
+                    <a asp-controller="Donation" asp-action="Create" class="btn btn-gold btn-lg px-4">Donate Now</a>
+                    <a asp-controller="Volunteer" asp-action="Create" class="btn btn-outline-light btn-lg px-4">Volunteer</a>
+                    <a asp-controller="Project" asp-action="Index" class="btn btn-outline-light btn-lg px-4">View Relief Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="eyebrow dark">HOW YOU CAN HELP</span>
+            <h2 class="fw-bold mt-2">Make a practical difference</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">♥</div>
+                    <h4>Donate</h4>
+                    <p>Support relief operations with a one-time or recurring contribution in ZAR, USD or EUR.</p>
+                    <a asp-controller="Donation" asp-action="Create" class="btn btn-success">Donate</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">★</div>
+                    <h4>Volunteer</h4>
+                    <p>Register your skills and availability so humanitarian teams can identify suitable support.</p>
+                    <a asp-controller="Volunteer" asp-action="Create" class="btn btn-success">Register</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card h-100">
+                    <div class="feature-icon">✓</div>
+                    <h4>Follow Projects</h4>
+                    <p>View active relief projects and operational updates published by authorised employees.</p>
+                    <a asp-controller="Project" asp-action="Index" class="btn btn-success">Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="info-panel">
+                    <span class="eyebrow dark">PROTOTYPE RELEASE</span>
+                    <h3 class="mt-2">Built for fast, reliable humanitarian coordination</h3>
+                    <p class="text-muted mb-0">
+                        The prototype demonstrates ASP.NET Core, Identity roles, responsive Bootstrap styling,
+                        donation capture, volunteer registration, project updates and database-backed records.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="quote-panel">
+                    <h5>Emergency response needs good information.</h5>
+                    <p class="mb-0">The system is designed to keep critical operational information structured and accessible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

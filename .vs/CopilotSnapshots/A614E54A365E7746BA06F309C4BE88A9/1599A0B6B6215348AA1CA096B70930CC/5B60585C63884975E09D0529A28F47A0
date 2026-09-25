@@ -1,0 +1,23 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace GiftOfTheGivers.Models
+{
+    public class ProjectUpdate
+    {
+        public int Id { get; set; }
+
+        public int ProjectID { get; set; }
+
+        public ReliefProject? Project { get; set; }        
+    }","explanation":"Rename UpdateID to Id so EF Core conventions pick up the primary key; keep other properties unchanged."}```jsonUnexpected token in JSON at position 782.                                                                                            
+
+        public string? EmployeeID { get; set; }
+
+        public ApplicationUser? Employee { get; set; }
+
+        [Required]
+        public string UpdateText { get; set; } = string.Empty;
+
+        public DateTime UpdateDate { get; set; } = DateTime.UtcNow;
+    }
+}

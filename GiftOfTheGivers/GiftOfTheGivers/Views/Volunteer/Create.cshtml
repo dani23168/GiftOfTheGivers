@@ -1,0 +1,30 @@
+@model Volunteer
+@{
+    ViewData["Title"] = "Volunteer";
+}
+<section class="page-hero">
+    <div class="container py-5">
+        <span class="eyebrow">JOIN THE RESPONSE</span>
+        <h1 class="text-white fw-bold mt-2">Register as a volunteer</h1>
+        <p class="text-white-50 mb-0">Tell us where your skills and availability can help.</p>
+    </div>
+</section>
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="form-card">
+                <form asp-action="Create" method="post">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    <div class="mb-3"><label asp-for="FullName" class="form-label fw-semibold">Full name</label><input asp-for="FullName" class="form-control" /><span asp-validation-for="FullName" class="text-danger"></span></div>
+                    <div class="mb-3"><label asp-for="Skills" class="form-label fw-semibold">Skills</label><textarea asp-for="Skills" class="form-control" rows="3" placeholder="First aid, logistics, driving, administration..."></textarea><span asp-validation-for="Skills" class="text-danger"></span></div>
+                    <div class="row g-3">
+                        <div class="col-md-6"><label asp-for="Availability" class="form-label fw-semibold">Availability</label><input asp-for="Availability" class="form-control" placeholder="Weekends / Full-time" /></div>
+                        <div class="col-md-6"><label asp-for="Province" class="form-label fw-semibold">Province</label><select asp-for="Province" class="form-select"><option value="">Select province</option><option>Eastern Cape</option><option>Free State</option><option>Gauteng</option><option>KwaZulu-Natal</option><option>Limpopo</option><option>Mpumalanga</option><option>North West</option><option>Northern Cape</option><option>Western Cape</option></select></div>
+                    </div>
+                    <button class="btn btn-success btn-lg w-100 mt-4">Register Interest</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }
