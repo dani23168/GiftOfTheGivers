@@ -1,0 +1,38 @@
+trigger:
+- main
+
+pool:
+  name: GiftOfTheGivers-Pool12
+
+steps:
+
+- script: echo "Starting GiftOfTheGivers build..."
+  displayName: 'Start Build'
+
+- task: NuGetToolInstaller@1
+  displayName: 'Install NuGet'
+
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+
+- task: VSBuild@1
+  displayName: 'Build Visual Studio solution'
+  inputs:
+    solution: '**/*.sln'
+    configuration: 'Release'
+    clean: true
+
+- task: VSTest@3
+  displayName: 'Run Tests'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      **\*Test*.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: 'Any CPU'
+    configuration: 'Release'
