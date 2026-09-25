@@ -1,4 +1,4 @@
-appsettings.Development.jsonusing GiftOfTheGivers.Models;
+using GiftOfTheGivers.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,8 +6,11 @@ namespace GiftOfTheGivers.Data;
 
 public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options) { }
+    public ApplicationDbContext(
+        DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+    }
 
     public DbSet<Donation> Donations => Set<Donation>();
     public DbSet<Volunteer> Volunteers => Set<Volunteer>();
@@ -53,10 +56,19 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .HasForeignKey<TaxCertificate>(x => x.DonationID)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.Entity<Donation>().HasIndex(x => x.DonationDate);
-        builder.Entity<Donation>().HasIndex(x => x.Currency);
-        builder.Entity<Volunteer>().HasIndex(x => x.Status);
-        builder.Entity<Volunteer>().HasIndex(x => x.DateRegistered);
-        builder.Entity<ReliefProject>().HasIndex(x => x.Status);
+        builder.Entity<Donation>()
+            .HasIndex(x => x.DonationDate);
+
+        builder.Entity<Donation>()
+            .HasIndex(x => x.Currency);
+
+        builder.Entity<Volunteer>()
+            .HasIndex(x => x.Status);
+
+        builder.Entity<Volunteer>()
+            .HasIndex(x => x.DateRegistered);
+
+        builder.Entity<ReliefProject>()
+            .HasIndex(x => x.Status);
     }
 }
