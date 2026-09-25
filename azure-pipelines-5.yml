@@ -1,0 +1,28 @@
+trigger:
+- main
+
+pool:
+  name: GiftOfTheGivers-Pool12
+
+steps:
+
+- task: UseDotNet@2
+  displayName: 'Install .NET 10 SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
+- script: |
+    cd GiftOfTheGivers/GiftOfTheGivers
+    dotnet restore
+  displayName: 'Restore dependencies'
+
+- script: |
+    cd GiftOfTheGivers/GiftOfTheGivers
+    dotnet build --configuration Release --no-restore
+  displayName: 'Build application'
+
+- script: |
+    cd GiftOfTheGivers/GiftOfTheGivers
+    dotnet test --configuration Release --no-build
+  displayName: 'Run tests'
