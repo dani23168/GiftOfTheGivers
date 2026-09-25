@@ -6,33 +6,20 @@ pool:
 
 steps:
 
-- script: echo "Starting GiftOfTheGivers build..."
-  displayName: 'Start Build'
-
-- task: NuGetToolInstaller@1
-  displayName: 'Install NuGet'
-
-- task: NuGetCommand@2
-  displayName: 'Restore NuGet packages'
+- task: UseDotNet@2
+  displayName: 'Install .NET 10 SDK'
   inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
+    packageType: 'sdk'
+    version: '10.x'
 
-- task: VSBuild@1
-  displayName: 'Build Visual Studio solution'
-  inputs:
-    solution: '**/*.sln'
-    configuration: 'Release'
-    clean: true
+- script: dotnet --info
+  displayName: 'Display .NET information'
 
-- task: VSTest@3
-  displayName: 'Run Tests'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*test*.dll
-      **\*Test*.dll
-      !**\obj\**
-    searchFolder: '$(System.DefaultWorkingDirectory)'
-    platform: 'Any CPU'
-    configuration: 'Release'
+- script: dotnet restore GiftOfTheGivers/GiftOfTheGivers/GiftOfTheGivers.csproj
+  displayName: 'Restore dependencies'
+
+- script: dotnet build GiftOfTheGivers/GiftOfTheGivers/GiftOfTheGivers.csproj --configuration Release --no-restore
+  displayName: 'Build application'
+
+- script: dotnet test GiftOfTheGivers/GiftOfTheGivers/GiftOfTheGivers.csproj --configuration Release --no-build
+  displayName: 'Run tests'
