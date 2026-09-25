@@ -4,21 +4,34 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: GiftOfTheGivers-Pool12
 
 variables:
   buildConfiguration: 'Release'
 
 steps:
 
+# Install .NET 10 SDK
+- task: UseDotNet@2
+  displayName: 'Install .NET 10 SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '10.x'
+
 # Restore project dependencies
-- script: dotnet restore
+- script: |
+    cd GiftOfTheGivers/GiftOfTheGivers
+    dotnet restore
   displayName: 'Restore dependencies'
 
 # Build the application
-- script: dotnet build --configuration $(buildConfiguration) --no-restore
+- script: |
+    cd GiftOfTheGivers/GiftOfTheGivers
+    dotnet build --configuration $(buildConfiguration) --no-restore
   displayName: 'Build application'
 
 # Run automated tests
-- script: dotnet test --configuration $(buildConfiguration) --no-build
+- script: |
+    cd GiftOfTheGivers/GiftOfTheGivers
+    dotnet test --configuration $(buildConfiguration) --no-build
   displayName: 'Run tests'
