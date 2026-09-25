@@ -1,0 +1,37 @@
+trigger:
+- main
+
+pool:
+  name: GiftOfTheGivers-Pool
+
+steps:
+
+# 1. Restore NuGet dependencies
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  displayName: 'Restore NuGet packages'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+
+# 2. Build the Visual Studio solution
+- task: VSBuild@1
+  displayName: 'Build Visual Studio solution'
+  inputs:
+    solution: '**/*.sln'
+    configuration: 'Release'
+    clean: true
+
+# 3. Run automated tests
+- task: VSTest@3
+  displayName: 'Run tests'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      **\*Test*.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    platform: 'Any CPU'
+    configuration: 'Release'
