@@ -1,7 +1,7 @@
-# ASP.NET Core Continuous Integration Pipeline
-
+# ASP.NET Core Continuous Integration and Automated Testing Pipeline
 trigger:
-- main
+- master
+- development
 
 pool:
   name: GiftOfTheGivers-Pool12
@@ -10,28 +10,21 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-
-# Install .NET 10 SDK
+# Install .NET 10 SDK (matching your development environment)
 - task: UseDotNet@2
   displayName: 'Install .NET 10 SDK'
   inputs:
     packageType: 'sdk'
     version: '10.x'
 
-# Restore project dependencies
-- script: |
-    cd GiftOfTheGivers/GiftOfTheGivers
-    dotnet restore
-  displayName: 'Restore dependencies'
+# Restore dependencies for the entire solution
+- script: dotnet restore GiftOfTheGivers.sln
+  displayName: 'Restore solution dependencies'
 
-# Build the application
-- script: |
-    cd GiftOfTheGivers/GiftOfTheGivers
-    dotnet build --configuration $(buildConfiguration) --no-restore
-  displayName: 'Build application'
+# Build the entire solution (Web App + Test Project)
+- script: dotnet build GiftOfTheGivers.sln --configuration $(buildConfiguration) --no-restore
+  displayName: 'Build solution (Web App & Tests)'
 
-# Run automated tests
-- script: |
-    cd GiftOfTheGivers/GiftOfTheGivers
-    dotnet test --configuration $(buildConfiguration) --no-build
-  displayName: 'Run tests'
+# Run all automated Unit, Integration, and Selenium Tests automatically on commit
+- script: dotnet test GiftOfTheGivers.sln --configuration $(buildConfiguration) --no-build --logger "trx"
+  displayName: 'Run automated tests and generate test logs'
